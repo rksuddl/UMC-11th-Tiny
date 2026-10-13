@@ -16,7 +16,8 @@ export function Header() {
             to="/"
             className={cn(
               "text-gray-700",
-              location.pathname === "/" && "font-semibold text-black underline underline-offset-4",
+              location.pathname === "/" &&
+                "font-semibold text-black underline underline-offset-4",
             )}
           >
             영화
@@ -25,12 +26,22 @@ export function Header() {
             to="/search"
             className={cn(
               "text-gray-700",
-              location.pathname === "/search" && "font-semibold text-black underline underline-offset-4",
+              location.pathname === "/search" &&
+                "font-semibold text-black underline underline-offset-4",
             )}
           >
             검색
           </Link>
-          <span className="text-gray-700">내 정보</span>
+          <Link
+            to="/me"
+            className={cn(
+              "text-gray-700",
+              location.pathname === "/me" &&
+                "font-semibold text-black underline underline-offset-4",
+            )}
+          >
+            내 정보
+          </Link>
         </nav>
       </div>
       <div className="flex items-center gap-3">
